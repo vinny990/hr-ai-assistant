@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR Assistant — Login</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f4f6f9; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .login-box { background: white; border-radius: 8px; padding: 40px; width: 380px; box-shadow: 0 2px 16px rgba(0,0,0,0.12); }
+        .logo { text-align: center; margin-bottom: 30px; }
+        .logo h1 { color: #003366; font-size: 22px; margin-bottom: 6px; }
+        .logo p { color: #666; font-size: 13px; }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-size: 13px; font-weight: bold; color: #333; margin-bottom: 6px; }
+        input { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+        input:focus { outline: none; border-color: #003366; }
+        .login-btn { width: 100%; background: #003366; color: white; border: none; padding: 12px; font-size: 15px; border-radius: 4px; cursor: pointer; margin-top: 8px; }
+        .login-btn:hover { background: #0055a4; }
+        .error { background: #fff5f5; border-left: 4px solid #dc3545; padding: 10px 14px; border-radius: 4px; font-size: 13px; color: #dc3545; margin-bottom: 16px; }
+        .hint { margin-top: 20px; padding: 12px; background: #f0f4f8; border-radius: 4px; font-size: 12px; color: #666; }
+        .hint p { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+<div class="login-box">
+    <div class="logo">
+        <h1>TechSecure HR Assistant</h1>
+        <p>Internal Employee Portal</p>
+    </div>
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+    <form method="POST">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter username" required autofocus>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="login-btn">Sign In</button>
+    </form>
+    <div class="hint">
+        <p><strong>Employee:</strong> employee / demo123</p>
+        <p><strong>Admin:</strong> admin / admin123</p>
+    </div>
+</div>
+</body>
+</html>
