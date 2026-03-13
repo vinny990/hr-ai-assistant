@@ -1,6 +1,8 @@
 # HR AI Assistant
 
-A RAG-based internal HR chatbot that answers employee questions from real HR policy documents. Built to demonstrate production AI architecture patterns including input validation, role-based access control, and feedback loops.
+A RAG-based internal HR chatbot that answers employee questions from real HR policy documents. Live Demo: https://hr-ai-assistant-gzv5.onrender.com
+
+Built to demonstrate production AI architecture patterns including input validation, role-based access control, and feedback loops.
 
 ---
 
