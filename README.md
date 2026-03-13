@@ -22,7 +22,7 @@ Employee asks question
 → Input validation layer (PII detection, prompt injection, topic filter)
 → Question converted to vector (embedding)
 → Semantic search against HR document chunks
-→ Top 3 relevant chunks retrieved
+→ Top 3 relevant chunks retrieved (configurable tradeoff between retrieval recall and prompt size)
 → Chunks + question sent to LLM
 → The prompt instructs the LLM to answer using the retrieved HR context and avoid unsupported claims
 → Answer returned to employee
