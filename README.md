@@ -24,7 +24,7 @@ Employee asks question
 → Semantic search against HR document chunks
 → Top 3 relevant chunks retrieved
 → Chunks + question sent to LLM
-→ LLM answers ONLY from retrieved chunks
+→ The prompt instructs the LLM to answer using the retrieved HR context and avoid unsupported claims
 → Answer returned to employee
 → Employee gives thumbs up or down
 → Feedback stored for HR review
@@ -51,7 +51,8 @@ flowchart TD
     J --> K[Employee gives thumbs up or down]
     K --> L[Feedback stored for HR review]
 ```
-
+In production, embeddings would be stored in a vector database such as 
+pgvector for persistence and scalable similarity search.
 
 ## Features
 
