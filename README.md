@@ -130,3 +130,14 @@ To prove the risk is real, not theoretical. Seeing salary data leak in vulnerabl
 
 **Why feedback loop?**
 At 3,000 users you cannot manually review every answer. Thumbs down signals tell you exactly where the knowledge base is failing.
+
+## Screenshots
+
+**Login Page**
+<img src="screenshots/login.png" width="800"/>
+
+**Secure Mode — Answer from real HR policy**
+<img src="screenshots/secure-mode.png" width="800"/>
+
+**Vulnerable Mode — Salary data leaked**
+<img src="screenshots/vulnerable-mode.png" width="800"/>
