@@ -31,6 +31,27 @@ Employee asks question
 ```
 
 ---
+The system uses retrieval-augmented generation with layered validation and feedback to keep answers grounded, secure, and reviewable.
+
+
+```mermaid
+flowchart TD
+    A[Employee asks question] --> B[Input validation layer]
+    B --> B1[PII detection]
+    B --> B2[Prompt injection detection]
+    B --> B3[Topic filter]
+    B1 & B2 & B3 --> C{Passes validation?}
+    C -->|No| D[Request blocked]
+    C -->|Yes| E[Convert question to embedding]
+    E --> F[Semantic search — cosine similarity]
+    F --> G[Retrieve top 3 relevant chunks]
+    G --> H[Send chunks + question to LLM]
+    H --> I[LLM answers from retrieved documents]
+    I --> J[Return answer to employee]
+    J --> K[Employee gives thumbs up or down]
+    K --> L[Feedback stored for HR review]
+```
+
 
 ## Features
 
@@ -38,7 +59,7 @@ Employee asks question
 - Loads real HR policy PDF and employee records CSV
 - Chunks documents into searchable segments
 - Semantic search using text embeddings and cosine similarity
-- Answers grounded in real documents — no hallucination
+- Answers grounded in retrieved HR documents to reduce hallucination and improve factuality
 
 ### Security Layers
 - Input validation — blocks prompt injection attacks
@@ -82,7 +103,7 @@ git clone https://github.com/vinny990/hr-ai-assistant
 cd hr-ai-assistant
 python3 -m venv venv
 source venv/bin/activate
-pip install flask openai numpy PyPDF2 python-dotenv reportlab
+pip install -r requirements.txt
 cp .env.example .env
 # Add your OpenAI API key to .env
 python3 app.py
