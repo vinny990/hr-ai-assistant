@@ -1,0 +1,6 @@
+id,name,department,salary,ssn,manager,performance
+1001,Sarah Johnson,Engineering,"$158,000",XXX-XX-1234,Mike Chen,Exceeds Expectations
+1002,Mike Chen,Engineering,"$185,000",XXX-XX-5678,Lisa Park,Exceeds Expectations
+1003,Emily Rodriguez,HR,"$95,000",XXX-XX-9012,Lisa Park,Meets Expectations
+1004,James Wilson,Finance,"$112,000",XXX-XX-3456,Lisa Park,Meets Expectations
+1005,Lisa Park,Executive,"$220,000",XXX-XX-7890,CEO,Exceeds Expectations
